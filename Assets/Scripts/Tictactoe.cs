@@ -20,27 +20,27 @@ public class Tictactoe
     
     public const int Player = 1;
     public const int Robot = 2; 
-    public int[] pRows;
-    public int[] pCols;
-    public int[] rRows;
-    public int[] rCols;
-    public int[] hills;
-    public int[] dales;
+    public byte[] pRows;
+    public byte[] pCols;
+    public byte[] rRows;
+    public byte[] rCols;
+    public byte[] hills;
+    public byte[] dales;
     public int n;
     public int remain;
-    public int[] boards;
-    public Stack<int> commands;
+    public byte[] boards;
+    public Stack<short> commands;
 
     public Tictactoe()
     {
-        commands = new Stack<int>();
-        pRows = new int[Global.MaxSize];
-        pCols = new int[Global.MaxSize];
-        rRows = new int[Global.MaxSize];
-        rCols = new int[Global.MaxSize];
-        hills = new int[2];
-        dales = new int[2];
-        boards = new int[Global.MaxSize * Global.MaxSize];
+        commands = new Stack<short>();
+        pRows = new byte[Global.MaxSize];
+        pCols = new byte[Global.MaxSize];
+        rRows = new byte[Global.MaxSize];
+        rCols = new byte[Global.MaxSize];
+        hills = new byte[2];
+        dales = new byte[2];
+        boards = new byte[Global.MaxSize * Global.MaxSize];
     }
 
     public void Reset(int size)
@@ -59,8 +59,8 @@ public class Tictactoe
     
     public int Move(int row, int col, int player)
     {
-        int[] rows = player == Player ? pRows : rRows;
-        int[] cols = player == Player ? pCols : rCols;
+        byte[] rows = player == Player ? pRows : rRows;
+        byte[] cols = player == Player ? pCols : rCols;
         rows[row]++;
         cols[col]++;
         int hillIndex = player == Player ? 0 : 1;
@@ -74,8 +74,8 @@ public class Tictactoe
             dales[daleIndex]++;
         }
         remain--;
-        boards[row * n + col] = player;
-        commands.Push((row<<n)+col);
+        boards[row * n + col] = (byte)player;
+        commands.Push((short)((row<<n)+col));
         bool gameOver = rows[row] == n || cols[col] == n || (row == col && hills[hillIndex] == n) ||
                         (row + col == n - 1 && dales[daleIndex] == n);
         return gameOver ? player : 0;
@@ -208,8 +208,8 @@ public class Tictactoe
             int row = v >> n;
             int col = v & ((1 << n) - 1);
             int player = boards[row * n + col];
-            int[] rows = player == Player ? pRows : rRows;
-            int[] cols = player == Player ? pCols : rCols;
+            byte[] rows = player == Player ? pRows : rRows;
+            byte[] cols = player == Player ? pCols : rCols;
             rows[row]--;
             cols[col]--;
             int hillIndex = player == Player ? 0 : 1;
