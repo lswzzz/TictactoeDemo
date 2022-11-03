@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f41ae93610a7c4675a73d6c53ce42307, type: 3}
+    - {fileID: 2800000, guid: 1457437aee5b14bfabfbc2191298de37, type: 3}
+    - {fileID: 2800000, guid: f84398b252f26421794f3e54979533a7, type: 3}
+    - {fileID: 2800000, guid: fd5a1e12a31c149e1a11dbc789d54ac2, type: 3}
+    - {fileID: 2800000, guid: ab1b51d5cfc564872b5d227789914b42, type: 3}
+    - {fileID: 2800000, guid: 5551461a712fd427aa2b059aac398cd4, type: 3}
+    - {fileID: 2800000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+    - {fileID: 2800000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+    - {fileID: 2800000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+    - {fileID: 2800000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+    - {fileID: 2800000, guid: a267d7d1c98f84c28a85a0370266d0ac, type: 3}
+    - {fileID: 2800000, guid: 1ee806a8fa9004e13aaad62c33edb579, type: 3}
+    - {fileID: 2800000, guid: 62e3fecfc3c404a2c85caeee71c84d1c, type: 3}
+    - {fileID: 2800000, guid: 4e107d220eb094e42ae9db6bb40f18f5, type: 3}
+    - {fileID: 2800000, guid: f41ae93610a7c4675a73d6c53ce42307, type: 3}
+    - {fileID: 2800000, guid: 1457437aee5b14bfabfbc2191298de37, type: 3}
+    - {fileID: 2800000, guid: 228b09b7fa1c5455eab8432a85fac4ee, type: 3}
+    - {fileID: 2800000, guid: eb3db5b0868bc4f348e3d3a1dfbf32a8, type: 3}
+    - {fileID: 2800000, guid: 2feaafe4e67104e6fbd6232e8f31f297, type: 3}
+    - {fileID: 2800000, guid: 4432d35b62693408a8f5280b7141f6af, type: 3}
+    - {fileID: 2800000, guid: f84398b252f26421794f3e54979533a7, type: 3}
+    - {fileID: 2800000, guid: 792b2f901d1454336844c8541889db01, type: 3}
+    - {fileID: 2800000, guid: fd5a1e12a31c149e1a11dbc789d54ac2, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 792b2f901d1454336844c8541889db01, type: 3}
+  - {fileID: 21300000, guid: eb3db5b0868bc4f348e3d3a1dfbf32a8, type: 3}
+  - {fileID: 21300000, guid: a267d7d1c98f84c28a85a0370266d0ac, type: 3}
+  - {fileID: 21300000, guid: fd5a1e12a31c149e1a11dbc789d54ac2, type: 3}
+  - {fileID: 21300000, guid: 4e107d220eb094e42ae9db6bb40f18f5, type: 3}
+  - {fileID: 21300000, guid: f84398b252f26421794f3e54979533a7, type: 3}
+  - {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+  - {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+  - {fileID: 21300000, guid: 2feaafe4e67104e6fbd6232e8f31f297, type: 3}
+  - {fileID: 21300000, guid: ab1b51d5cfc564872b5d227789914b42, type: 3}
+  - {fileID: 21300000, guid: f41ae93610a7c4675a73d6c53ce42307, type: 3}
+  - {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+  - {fileID: 21300000, guid: 228b09b7fa1c5455eab8432a85fac4ee, type: 3}
+  - {fileID: 21300000, guid: 1ee806a8fa9004e13aaad62c33edb579, type: 3}
+  - {fileID: 21300000, guid: 5551461a712fd427aa2b059aac398cd4, type: 3}
+  - {fileID: 21300000, guid: 1457437aee5b14bfabfbc2191298de37, type: 3}
+  - {fileID: 21300000, guid: 4432d35b62693408a8f5280b7141f6af, type: 3}
+  - {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+  - {fileID: 21300000, guid: 62e3fecfc3c404a2c85caeee71c84d1c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - start
+  - Popup_Frame01_Navy
+  - Btn_OtherButton_Square05
+  - x
+  - Icon_PictoIcon_Close01
+  - right-arrow
+  - Btn_MainButton_Sky
+  - Btn_MainButton_Purple
+  - Popup_Frame01_Purple
+  - arrow-circle
+  - left-arrow
+  - Btn_MainButton_Orange
+  - Popup_00_TitleLIne
+  - Frame_ListFrame14_d1
+  - Background_ScreenDimed_Black
+  - o
+  - return
+  - Btn_MainButton_Blue
+  - gear
+  m_Tag: Atlas
+  m_IsVariant: 0
+  m_IsPlaceholder: 0
