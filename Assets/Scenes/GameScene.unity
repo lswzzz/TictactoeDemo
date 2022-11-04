@@ -2276,6 +2276,7 @@ MonoBehaviour:
   Prefab: {fileID: 4488227127343919606, guid: 58943781a056f49fca631bb7bc1e2fbc, type: 3}
   panel: {fileID: 1535321954}
   Gap: 40
+  resetSound: {fileID: 8300000, guid: efc7944517a20496cbfa6885cc8b54c3, type: 3}
   messageController: {fileID: 420522978}
 --- !u!1 &1236950236
 GameObject:

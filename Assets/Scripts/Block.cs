@@ -1,3 +1,5 @@
+using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +11,7 @@ public class Block : MonoBehaviour
     public int row;
     public int col;
     private RectTransform rectTransform;
-    private 
+    private float animationTime = 0.5f;
     
     void Awake()
     {
@@ -28,6 +30,14 @@ public class Block : MonoBehaviour
         this.col = col;
         O.gameObject.SetActive(false);
         X.gameObject.SetActive(false);
+        ShowAnimation();
+    }
+
+    void ShowAnimation()
+    {
+        rectTransform.localScale = Vector3.zero;
+        rectTransform.DOLocalRotate(new Vector3(0, 0, 360), 0.5f).SetRelative(true);
+        rectTransform.DOScale(new Vector3(1, 1, 1), 0.5f);
     }
     
     public void Click()
@@ -38,16 +48,22 @@ public class Block : MonoBehaviour
     public void PlayerPlace()
     {
         O.gameObject.SetActive(true);
+        rectTransform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+        rectTransform.DOScale(new Vector3(1, 1, 1), 0.5f);
     }
     
     public void RobotPlace()
     {
         X.gameObject.SetActive(true);
+        rectTransform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+        rectTransform.DOScale(new Vector3(1, 1, 1), 0.5f);
     }
 
     public void Rollback()
     {
         O.gameObject.SetActive(false);
         X.gameObject.SetActive(false);
+        rectTransform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+        rectTransform.DOScale(new Vector3(1, 1, 1), 0.5f);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Drawing;
 using System.Text;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -10,11 +11,13 @@ public class BlocksController : MonoBehaviour, EventListener<CustomEvent>
     public Block Prefab;
     public RectTransform panel;
     public int Gap = 20;
+    public AudioClip resetSound;
     private bool placeEnabled = true;
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
     private WaitForSeconds wait2 = new WaitForSeconds(3f);
     private Block[] Blocks;
     public MessageController messageController;
+    private AudioSource source;
 
     void OnEnable()
     {
@@ -29,12 +32,12 @@ public class BlocksController : MonoBehaviour, EventListener<CustomEvent>
     void Awake()
     {
         Blocks = new Block[Global.MaxSize * Global.MaxSize];
+        source = EventSystem.current.GetComponent<AudioSource>();
     }
     
     public void Init()
     {
         Tictactoe.Instance.Reset(Global.Size);
-        placeEnabled = true;
         int n = Global.Size;
         float width = panel.rect.width;
         float height = panel.rect.height;
@@ -60,6 +63,14 @@ public class BlocksController : MonoBehaviour, EventListener<CustomEvent>
             }
         }
 
+        StartCoroutine(DelayPlaceEnabled());
+    }
+
+    IEnumerator DelayPlaceEnabled()
+    {
+        placeEnabled = false;
+        yield return wait;
+        placeEnabled = true;
     }
 
     public void Reset()
@@ -122,6 +133,7 @@ public class BlocksController : MonoBehaviour, EventListener<CustomEvent>
                 messageController.ShowResult(result);
                 yield return wait2;
                 Reset();
+                source.PlayOneShot(resetSound);
             }
             else
             {
@@ -142,6 +154,7 @@ public class BlocksController : MonoBehaviour, EventListener<CustomEvent>
             messageController.ShowResult(result);
             yield return wait2;
             Reset();
+            source.PlayOneShot(resetSound);
         }
         else
         {
